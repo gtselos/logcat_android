@@ -9,13 +9,15 @@
   "categories": [
     "Other"
   ],
-  "activationEvents": [],
+  "activationEvents": [
+    "onCommand:android-logcat-viewer.show"
+  ],
   "main": "./dist/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "android-logcat-viewer.helloWorld",
-        "title": "Hello World"
+        "command": "android-logcat-viewer.show",
+        "title": "Show Android Logcat"
       }
     ]
   },
@@ -43,5 +45,8 @@
     "webpack-cli": "^6.0.1",
     "@vscode/test-cli": "^0.0.10",
     "@vscode/test-electron": "^2.5.2"
+  },
+  "dependencies": {
+    "ansi-colors": "^4.1.3"
   }
 }

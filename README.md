@@ -1,71 +1,45 @@
-# android-logcat-viewer README
+# Android Logcat Viewer for VS Code
 
-This is the README for your extension "android-logcat-viewer". After writing up a brief description, we recommend including the following sections.
+A Visual Studio Code extension that provides a colored logcat output viewer for Android devices, similar to Android Studio's logcat viewer.
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
-
-For example if there is an image subfolder under your extension project workspace:
-
-\!\[feature X\]\(images/feature-x.png\)
-
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+- View logcat output from connected Android devices with color-coding
+- Filter log messages by tag, level, or message content
+- Auto-scroll option to follow new log entries
+- Clear log view
+- Multiple device support
 
 ## Requirements
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+- Android Debug Bridge (ADB) must be installed and available in the system PATH
+- Android device connected via USB with USB debugging enabled, or an Android emulator running
 
-## Extension Settings
+## Usage
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+1. Connect your Android device via USB or start an Android emulator
+2. In VS Code, open the command palette (`Ctrl+Shift+P` or `Cmd+Shift+P` on macOS)
+3. Type "Show Android Logcat" and select the command
+4. Select your device from the dropdown
+5. Click "Start" to begin viewing logs
 
-For example:
+## Log Colors
 
-This extension contributes the following settings:
+Logs are color-coded by priority level, similar to Android Studio:
+- Verbose (V): Gray
+- Debug (D): Teal
+- Info (I): Blue
+- Warning (W): Orange
+- Error (E): Red
+- Fatal (F): Black text on red background
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+## Filtering
 
-## Known Issues
+Use the filter input box to filter log messages. You can filter by:
+- Text content (just type the text to search for)
+- Tag (e.g., type "tag:MyTag" to show only logs with the "MyTag" tag)
+- Log level (e.g., type "level:E" to show only Error logs)
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+## License
 
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+This extension is licensed under the MIT License.

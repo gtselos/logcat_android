@@ -3,6 +3,10 @@
   "displayName": "Android Logcat Viewer",
   "description": "View and colorize Android logcat output from connected devices",
   "version": "0.0.1",
+  "repository": {
+  "type": "git",
+  "url": "https://github.com/gtselos/logcat_android.git"
+  },
   "engines": {
     "vscode": "^1.99.0"
   },
